@@ -1,4 +1,3 @@
-
 import java.io.FileNotFoundException;
 
 /**
@@ -22,6 +21,7 @@ public class AVSStaffDatabase
 		CSVReader input = new CSVReader();
 		while(input.hasStaff())
 		{
+			// James - 03/23/2014 - If putting in username and password for 2nd login, the first input.nextStaff would return null. This would simply pass null. 
 			return input.nextStaff(username, password);
 		}
 		return null;
